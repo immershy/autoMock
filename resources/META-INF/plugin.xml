@@ -1,0 +1,29 @@
+<idea-plugin version="2">
+    <id>zw.plugin.mock</id>
+    <name>AutoMock</name>
+    <version>1.0</version>
+    <vendor email="zhengwei@u51.com" url="">zw</vendor>
+
+    <description><![CDATA[
+     <p>A plugin for automatic generation of mockito unit test case.</p>
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="145.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.java</depends>
+    <depends optional="true">
+        com.intellij.modules.java
+    </depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+    <actions>
+        <action id="Singleton" class="zw.plugin.mock.AutoMockAction" text="生成mock用例">
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+        </action>
+    </actions>
+
+</idea-plugin>
