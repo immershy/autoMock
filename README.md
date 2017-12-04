@@ -1,4 +1,4 @@
 # autoMock
-Auto-Mock: A unit test code auto generation plugin fro intellij idea
+Auto-Mock: A unit test code auto generation plugin for intellij idea
 
 
