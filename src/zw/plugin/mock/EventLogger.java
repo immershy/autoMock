@@ -10,8 +10,8 @@ import com.intellij.openapi.ui.popup.Balloon;
  */
 public class EventLogger {
 
-    private static final String GROUP_ID = "Mvp Helper";
-    private static final String TITLE = "Mvp Helper Event Log";
+    private static final String GROUP_ID = "AutoMock";
+    private static final String TITLE = "AutoMock Plugin Event Log";
 
     public static void log(String msg) {
         Notification notification = new Notification(GROUP_ID, TITLE, msg,
