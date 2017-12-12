@@ -97,7 +97,7 @@ public class BaseFileGenerator implements Generator {
                             .createImportStatement(paramClz);
                         javaFile.getImportList().add(importStatement);
                         PsiExpression init = myFactory
-                            .createExpressionFromText("new " + paramClz.getName() + "()", psiParameter);
+                            .createExpressionFromText(createInitExpression(paramClz), psiParameter);
                         PsiDeclarationStatement psiDeclarationStatement = myFactory
                             .createVariableDeclarationStatement(psiParameter.getName(), psiParameter.getType(),
                                 init);
@@ -121,6 +121,32 @@ public class BaseFileGenerator implements Generator {
             fileEditorManager.openTextEditor(fileDescriptor, true);
             log("BaseFileGenerator: " + clzName + " 文件创建完成");
         });
+    }
+
+    private String createInitExpression(PsiClass paramClz) {
+        String clzName = paramClz.getName();
+        if (clzName.equals("int") || clzName.equals("Integer") || clzName.equals("short")) {
+            return "1";
+        }
+        if (clzName.equals("long") || clzName.equals("Long")) {
+            return "1L";
+        }
+        if (clzName.equals("String")) {
+            return "11";
+        }
+        if (clzName.equals("Boolean")) {
+            return "false";
+        }
+        if (clzName.equals("Float") || clzName.equals("float")) {
+            return "1F";
+        }
+        if (clzName.equals("Double") || clzName.equals("double")) {
+            return "1.00";
+        }
+        if (clzName.equals("BigDecimal")) {
+            return "new BigDecimal(1)";
+        }
+        return "new " + clzName + "()";
     }
 
     protected void generateFile(final PsiDirectory directory, final String fileName, final String type,
