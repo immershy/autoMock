@@ -132,7 +132,7 @@ public class BaseFileGenerator implements Generator {
             return "1L";
         }
         if (clzName.equals("String")) {
-            return "11";
+            return "\"11\"";
         }
         if (clzName.equals("Boolean")) {
             return "false";

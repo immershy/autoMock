@@ -1,4 +1,4 @@
 
-ssquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(ã›§¼üÿÿÿÿ8êøìà,
-msquid:S00114"QRename this interface name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ã¯Ú28êøìà,
 Ksquid:S1066"/Merge this if statement with the enclosing one.(Å™Î8âø â,
+ssquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(ã›§¼üÿÿÿÿ8êøìà,
+msquid:S00114"QRename this interface name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ã¯Ú28£Š£Õ„,
